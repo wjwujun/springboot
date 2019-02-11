@@ -1,0 +1,32 @@
+logging:
+  file: ../logs/spring-boot-hello.log
+  level.org.springframework.web: DEBUG
+
+spring:   #html模板
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: LEGACYHTML5 # 用非严格的 HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  datasource:     #mysql
+    druid:
+      url: jdbc:mysql://47.98.136.216:3306/gehua?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: wj@110120
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver        # MySQL 8.x: com.mysql.cj.jdbc.Driver
+
+
+mybatis:    #mybatis
+    type-aliases-package: com.sptringboot.main.entity  #实体类的存放路径
+    mapper-locations: classpath:mapper/*.xml      #配置文件
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
