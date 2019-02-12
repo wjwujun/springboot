@@ -22,8 +22,8 @@ spring:   #html模板
 
 
 mybatis:    #mybatis
-    type-aliases-package: com.sptringboot.main.entity  #实体类的存放路径
-    mapper-locations: classpath:mapper/*.xml      #配置文件
+    type-aliases-package: com.sptringboot.main.entity  #实体类的存放路径  <!--用于插件 自动生成mapper-->
+    mapper-locations: classpath:mapper/*.xml      #配置文件， <!--用于插件 自动生成mapper-->
     configuration:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 

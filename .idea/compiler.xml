@@ -6,8 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot" />
+        <module name="spring-admin" />
+        <module name="spring-client-feign" />
+        <module name="spring-client-ribbon" />
+        <module name="spring-config" />
+        <module name="spring-eureka" />
+        <module name="spring-service" />
+        <module name="spring-zipkin" />
+        <module name="spring-zuul" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-cloud-api" target="1.8" />
+      <module name="spring-cloud-gateway" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
